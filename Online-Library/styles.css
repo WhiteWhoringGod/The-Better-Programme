@@ -1,0 +1,44 @@
+/* 设置 flex 容器的样式 */
+.flex-container {
+    display: flex; /* 将元素设置为 flex 容器 */
+    flex-direction: column; /* 设置主轴方向为垂直方向 */
+    align-items: center; /* 垂直居中排列子元素 */;
+    height: 600px; /* 设置容器高度，方便查看效果 */
+    border: 1px solid #d0d0d0; /* 添加边框，方便查看容器范围 */
+}
+
+.book-container {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: row; /* 确保水平排列 */
+    flex-wrap: wrap; /* 如果图片过多自动换行 */
+    gap: 20px; /* 图片之间的间距 */
+    justify-content: center; /* 水平居中 */
+    margin-top: 30px;
+}
+
+.book-item {
+    width: 150px;
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+
+    will-change: transform; /* 启用GPU加速 */
+    aspect-ratio: 3/4; /* 锁定宽高比 */
+}
+
+
+.book-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+
+    
+}
+
+.book-item a:hover img {
+    opacity: 0.8;
+}
